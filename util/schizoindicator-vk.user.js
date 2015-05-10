@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Schizomatrix indicator for vk.com
 // @namespace    http://snyb.tk/
-// @version      0.1
+// @version      0.2
 // @description  Displays birthday color on vk.com profile pages
 // @author       Juribiyan
 // @match        vk.com/*
@@ -77,7 +77,7 @@ function _main() {
   if($bday && $byear && !document.querySelectorAll('.schizoindicator').length) {
     var day = /\[bday\]=([0-9]{1,2})/.exec($bday.href)
     var month = /\[bmonth\]=([0-9]{1,2})/.exec($bday.href)
-    var year = /\[byear\]=([0-9]{1,2})/.exec($byear.href)
+    var year = /\[byear\]=([0-9]{4})/.exec($byear.href)
     if(day && month && year) {
       var color = calculate({
         day: day[1], month: month[1], year: year[1]
