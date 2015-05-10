@@ -2,6 +2,26 @@ html {
 	background-image: url(bg.png);
 }
 
+header {
+	font-size: 0px;
+}
+
+.userscript-ad {
+	font-size: 20px;
+	padding: 15px 0;
+	background-color: #FFE000;
+}
+
+.userscript-ad a {
+	color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.userscript-ad a:hover {
+	color: black;
+  text-decoration: underline;
+}
+
 body {
 	min-width: 610px;
 	margin: 0px auto;

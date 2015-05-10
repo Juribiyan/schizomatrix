@@ -2,7 +2,7 @@
 // @name         Schizomatrix indicator for vk.com
 // @namespace    http://snyb.tk/
 // @version      0.1
-// @description  enter something useful
+// @description  Displays birthday color on vk.com profile pages
 // @author       Juribiyan
 // @match        vk.com/*
 // @grant        none
