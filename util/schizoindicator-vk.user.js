@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Schizomatrix indicator for vk.com
 // @namespace    http://snyb.tk/
-// @version      0.2
+// @version      0.3
 // @description  Displays birthday color on vk.com profile pages
 // @author       Juribiyan
 // @match        vk.com/*
@@ -89,15 +89,24 @@ function _main() {
 
 _main();
 
-function generateIndicator(color) {
+function generateIndicator(res) {
   var style = 'display: inline-block; '
   style += 'height: 10px; '
   style += 'width: 10px; '
-  style += 'background-color: '+color._color+'; '
+  style += 'background-color: '+res._color+'; '
   style += 'vertical-align: middle; '
   style += 'margin: 0 4px; '
   style += 'box-shadow: 0 0 1px black;'
-  return '<div class="schizoindicator" style="'+style+'"></div>';
+  var title = '';
+  for(var i = 1; i <= 9; i++) {
+    var txt = "";
+    for(j = res.kvadrat[i]; j > 0; j--) {
+      title += i;
+    }
+    if(i == 3 || i == 6) title += '\n';
+    else title += ' ';
+  }
+  return '<div class="schizoindicator" style="'+style+'" title="'+title+'"></div>';
 }
 
 var MO = window.MutationObserver || window.WebKitMutationObserver;
