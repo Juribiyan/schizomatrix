@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!-- By mimonoga for 0chan and клуб-аноним.рф, 2013 -->
+<html>
+<head>
+	<link href="fav.ico" rel="icon" type="image/x-icon" />
+	<meta charset="utf-8">
+	<title>ORIGINAL KRANUS TEST</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div id="_1" class="cd-red topthing"></div><div class="cd-yellow topthing"></div><div id="_3" class="cd-blue topthing"></div><div id="_4" class="cd-white topthing"></div>
+	<h1 class="logo">Kranus Test</h1>
+	<a id="switcher" href="javascript: switchtab();">Генератор календарей</a>
+	<div id="birth-test" class="switchable">
+		<h3>Введите дату рождения</h3>
+		<div class="ab" id="inputs">
+			<form onsubmit="checkprivilege(); return false;">
+				<input name="day" type="number" placeholder="ДД" required pattern="[0-9]{1,2}" max="31" size="2"/> 
+				<select name="month" required> 
+					<option value="1">Января</option>
+					<option value="2">Февраля</option>
+					<option value="3">Марта</option>
+					<option value="4">Апреля</option>
+					<option value="5">Мая</option>
+					<option value="6">Июня</option>
+					<option value="7">Июля</option>
+					<option value="8">Августа</option>
+					<option value="9">Сентября</option>
+					<option value="10">Октября</option>
+					<option value="11">Ноября</option>
+					<option value="12">Декабря</option>
+				</select>
+				<input type="number" name="year" placeholder="ГГГГ" required pattern="[0-9]{4,}" size="4"/>
+				<br>
+				<input type="submit" value="Ролл">
+			</form>
+		</div>
+		<div class="ab" id="results" style="display: none;">
+			<table id="matrix" class="matrix" cellspacing="0">
+				<tr>
+					<td class="mx-cell" id="1"></td>
+					<td class="mx-cell" id="4"></td>
+					<td class="mx-cell" id="7"></td>
+				</tr>
+				<tr>
+					<td class="mx-cell" id="2"></td>
+					<td class="mx-cell" id="5"></td>
+					<td class="mx-cell" id="8"></td>
+				</tr>
+				<tr>
+					<td class="mx-cell" id="3"></td>
+					<td class="mx-cell" id="6"></td>
+					<td class="mx-cell" id="9"></td>
+				</tr>
+			</table>
+			<div id="description">
+				<div id="dsc-title"></div>
+				<div id="dsc-text" class="desc"></div>
+				<div id="dsc-pup" style="display: none;" class="desc"></div>
+			</div>
+		</div>
+	</div>
+	<div id="calendar" style="display:none;" class="switchable">
+		<h3>Генератор календарей</h3>
+		<div id="cal-inputs">
+			<form onsubmit="return false;">
+				<span>Год: </span>
+				<input type="number" id="cyear" name="year" placeholder="ГГГГ" required pattern="[0-9]{4,}" size="4"/>
+				<input type="submit" onclick="javascript: genCal(this.form.year.value);" value="Сгенерировать">
+			</form>
+		</div>
+		<div id="cal-results">
+			<div class="cal-macrocell" id="mc-0"></div><div class="cal-macrocell" id="mc-1"></div><div class="cal-macrocell" id="mc-2"></div><div class="cal-macrocell" id="mc-3"></div>
+			<div class="cal-macrocell" id="mc-4"></div><div class="cal-macrocell" id="mc-5"></div><div class="cal-macrocell" id="mc-6"></div><div class="cal-macrocell" id="mc-7"></div>
+			<div class="cal-macrocell" id="mc-8"></div><div class="cal-macrocell" id="mc-9"></div><div class="cal-macrocell" id="mc-10"></div><div class="cal-macrocell" id="mc-11"></div>
+
+		</div>
+	</div>
+	<script>
+	$(document).ready(bindsomeshit);
+	</script>
+</body>
+</html>

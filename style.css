@@ -1,0 +1,250 @@
+html {
+	background-image: url(bg.png);
+}
+
+body {
+	min-width: 610px;
+	margin: 0px auto;
+	text-align: center;
+	font-family: "Trebuchet MS",Trebuchet,serif;
+}
+
+input, select {
+    height: 30px;
+    padding-left: 7px;
+    font-size: 20px;
+}
+
+input {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#results {
+	width: 610px;
+	margin: 0px auto;
+	margin-top: 10px;
+}
+
+.matrix {
+	float: left;
+}
+
+#description {
+	float: right;
+	width: 370px;
+	min-height: 250px;
+}
+
+#dsc-title {
+	font-weight: bold;
+	font-size: 35px;
+	border-radius: 10px;
+}
+
+.desc {
+	padding-top:10px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.57);
+	text-align: left;
+}
+
+.dt-white {
+	background: rgb(247, 247, 247);
+	color: rgb(196, 196, 196);
+	text-shadow: 1px 1px 0 white;
+}
+
+.dt-blue {
+	background: rgb(42, 155, 219);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.38);
+	color: white;
+}
+
+.dt-yellow {
+	background: rgb(255, 224, 0);
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.63);
+	color: rgb(53, 53, 53);
+}
+
+.dt-red {
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.63);
+	color: rgb(255, 240, 69);
+	background: rgb(255, 0, 82);
+}
+
+#dsc-pup {
+	font-style: italic;
+}
+
+select {
+    height: 36px;
+    margin-top: 10px;
+vertical-align: top;
+}
+
+#matrix .mx-cell, .cd {
+	cursor: pointer;
+}
+
+.matrix .mx-cell {
+   	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+   	box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.84), inset 1px 1px 0 rgba(0, 0, 0, 0.13);
+	font-size: 22px;
+	font-weight: bold;
+	color: rgb(102, 102, 102);
+	text-shadow: 1px 1px 0 white;
+	text-align: center;
+	height: 55px;
+	width: 70px;
+}
+
+#matrix .mx-cell:hover {
+background: lightGrey !important;
+color: black !important;
+text-shadow: none;
+}
+
+.top-link {
+	font-size: 10px;
+	opacity: 0.4;
+}
+
+.top-link:hover {
+	opacity: 1;
+}
+
+.matrix tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+
+.matrix tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+.matrix tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.matrix tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+footer {
+	float: right;
+width: 100%;
+}
+
+.logo {
+text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.63);
+font-size: 60px;
+letter-spacing: -2px;
+font-style: italic;
+margin-bottom: 5px;
+}
+
+#switcher {
+min-width: 166px;
+display: inline-block;
+background: rgb(192, 192, 192);
+opacity: 1;
+padding: 3px 10px;
+color: rgb(255, 255, 255);
+font-size: 14px;
+box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.63);
+border-radius: 100px;
+text-decoration: none;
+}
+
+#switcher:hover {
+	background: rgb(148, 148, 148);
+}
+
+.topthing {
+	display: inline-block;
+	height: 2px;
+	width: 25%;
+	vertical-align: top;
+}
+
+.cd-red {
+	background: #ff0052;
+}
+.cd-yellow {
+	background: #ffe000;
+}
+.cd-blue {
+	background: #019fde;
+}
+.cd-white {
+	background: #f7f7f7; 
+}
+
+.switchable {
+	margin-top: 50px;
+}
+
+input[type*="submit"] {
+	text-shadow: 0px 1px 0 rgb(248, 248, 248);
+}
+
+input[type*="number"] {
+	width: 4em;
+}
+
+.cal-macrocell {
+	display: inline-block;
+	margin: 10px;
+	min-height: 100px;
+	min-width: 100px;
+}
+
+#cal-results {
+max-width: 1400px;
+margin: 0px auto;
+}
+
+.previous, .next {
+	color: rgba(0, 0, 0, 0.44);
+}
+
+.cd-red span, .cd-blue span {
+	color: white;
+}
+
+th {
+	color: rgba(0, 0, 0, 0.69);
+}
+
+th.weekend {
+	color: rgb(160, 87, 87);
+}
+
+td {
+min-width: 25px;
+position: relative;
+z-index: 1;
+}
+
+.today, .xtoday {
+	box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0);
+	font-weight: bold;
+	z-index: 2;
+}
+
+.tomonth {
+	background: rgba(0, 0, 0, 0.03);
+	border-radius: 10px 10px 0 0;
+}
+
+#popupmatrix {
+	z-index: 3;
+box-shadow: 0 0 40px rgb(0, 0, 0);
+border-radius: 10px;
+}
