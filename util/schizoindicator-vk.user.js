@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Schizomatrix indicator for vk.com
 // @namespace    http://snyb.tk/
-// @version      0.3
+// @version      0.4
 // @description  Displays birthday color on vk.com profile pages
 // @author       Juribiyan
 // @match        vk.com/*
@@ -51,18 +51,10 @@ function calculate(input) {
 
   var day;
 
-  if(det < 3 || det > 5) {
-    day = "white";
-  }
-  else if(det == 3) {
-    day = "blue";
-  }
-  else if(det == 4) {
-    day = "yellow";
-  }
-  else if(det == 5) {
-    day = "red";
-  }
+  if(det == 3) day = "blue";
+  if(det == 4) day = "yellow";
+  if(det == 5) day = "red";
+  if(det >= 6) day = "black";
 
   var output = {
     _color: day,

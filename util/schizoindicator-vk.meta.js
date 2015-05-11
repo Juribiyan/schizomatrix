@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Schizomatrix indicator for vk.com
 // @namespace    http://snyb.tk/
-// @version      0.3
+// @version      0.4
 // @description  Displays birthday color on vk.com profile pages
 // @updateURL    https://github.com/Juribiyan/schizomatrix/raw/master/util/schizoindicator-vk.meta.js
 // @author       Juribiyan

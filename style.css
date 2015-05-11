@@ -92,6 +92,12 @@ input {
 	background: rgb(255, 0, 82);
 }
 
+.dt-black {
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.63);
+	color: rgb(218, 107, 255);
+	background: rgb(0,0,0);
+}
+
 #dsc-pup {
 	font-style: italic;
 }
@@ -205,6 +211,10 @@ text-decoration: none;
 .cd-white {
 	background: #f7f7f7; 
 }
+.cd-black {
+	background: #000; 
+}
+
 
 .switchable {
 	margin-top: 50px;
@@ -234,7 +244,7 @@ margin: 0px auto;
 	color: rgba(0, 0, 0, 0.44);
 }
 
-.cd-red span, .cd-blue span {
+.cd-red span, .cd-blue span, .cd-black span {
 	color: white;
 }
 
