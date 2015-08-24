@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Schizomatrix indicator for vk.com
 // @namespace    http://snyb.tk/
-// @version      0.4
+// @version      2.0
 // @description  Displays birthday color on vk.com profile pages
 // @author       Juribiyan
 // @match        vk.com/*
@@ -51,10 +51,10 @@ function calculate(input) {
 
   var day;
 
-  if(det == 3) day = "blue";
-  if(det == 4) day = "yellow";
-  if(det == 5) day = "red";
-  if(det >= 6) day = "black";
+  if(det == 3) day = "#019FDE";
+  if(det == 4) day = "#FFE000";
+  if(det == 5) day = "#FF0052";
+  if(det >= 6) day = "#212121";
 
   var output = {
     _color: day,
@@ -74,14 +74,14 @@ function _main() {
       var color = calculate({
         day: day[1], month: month[1], year: year[1]
       });
-      $byear.insertAdjacentHTML('afterend', generateIndicator(color));
+      $byear.insertAdjacentHTML('afterend', generateIndicator(color, month[1]+'/'+day[1]+'/'+year[1]));
     }
   }
 }
 
 _main();
 
-function generateIndicator(res) {
+function generateIndicator(res, date) {
   var style = 'display: inline-block; '
   style += 'height: 10px; '
   style += 'width: 10px; '
@@ -89,16 +89,7 @@ function generateIndicator(res) {
   style += 'vertical-align: middle; '
   style += 'margin: 0 4px; '
   style += 'box-shadow: 0 0 1px black;'
-  var title = '';
-  for(var i = 1; i <= 9; i++) {
-    var txt = "";
-    for(j = res.kvadrat[i]; j > 0; j--) {
-      title += i;
-    }
-    if(i == 3 || i == 6) title += '\n';
-    else title += ' ';
-  }
-  return '<div class="schizoindicator" style="'+style+'" title="'+title+'"></div>';
+    return '<a target="_blank" href="http://schizomatrix.cf#'+date+'" class="schizoindicator" style="'+style+'"></a>';
 }
 
 var MO = window.MutationObserver || window.WebKitMutationObserver;

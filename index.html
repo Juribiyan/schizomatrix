@@ -1,32 +1,31 @@
 <!DOCTYPE HTML>
-<!-- By mimonoga for 0chan and клуб-аноним.рф, 2013 -->
+<!-- MADE BY SNIVY FOR ILLUMINATI, 2013–2015 -->
 <html>
 <head>
 	<link href="fav.ico" rel="icon" type="image/x-icon" />
 	<meta charset="utf-8">
-	<title>ORIGINAL KRANUS TEST</title>
+	<title>SCHIZOM△TRIX</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
 	<header>
-		<div id="_1" class="cd-red topthing"></div>
-		<div class="cd-yellow topthing"></div>
-		<div id="_3" class="cd-blue topthing"></div>
-		<div id="_4" class="cd-white topthing"></div>
-		<div class="userscript-ad">
-			<a href="https://github.com/Juribiyan/schizomatrix/raw/master/util/schizoindicator-vk.user.js">Установить юзерскрипт для vk.com</a>
+		<div class="h-section logo-section">
+			<img id="logo" src="img/logo.svg" alt="Schizomatrix" height="27" width="256" class="fullsize-logo-layout">
+			<i class="logo-subtitle fullsize-logo-layout">Original Kranus Test</i>
+			<img id="small-logo" src="img/logo-small.svg" alt="Schizomatrix" height="70" width="63" class="small-logo-layout">
 		</div>
+		<a href="#day" class="h-section menu-item hidden"><div class="mi-text">День</div></a>
+		<a href="#cal" class="h-section menu-item hidden"><div class="mi-text">Календарь</div></a>
+		<a href="#faq" class="h-section menu-item hidden"><div class="mi-text">FAQ</div></a>
+		<a href="#util" class="h-section menu-item hidden"><div class="mi-text">Утилиты</div></a>
 	</header>
-	<h1 class="logo">Kranus Test</h1>
-	<a id="switcher" href="javascript: switchtab();">Генератор календарей</a>
-	<div id="birth-test" class="switchable">
-		<h3>Введите дату рождения</h3>
-		<div class="ab" id="inputs">
+	<div id="day" class="switchable" style="display:none">
+		<div class="ab cd-blue hero-form" id="inputs">
 			<form onsubmit="checkprivilege(); return false;">
-				<input name="day" type="number" placeholder="ДД" required pattern="[0-9]{1,2}" max="31" size="2"/> 
-				<select name="month" required> 
+				<input name="day" type="number" placeholder="ДД" required pattern="[0-9]{1,2}" max="31" size="2"class="transparent-input" /> 
+				<select name="month" class="transparent-input" required> 
 					<option value="1">Января</option>
 					<option value="2">Февраля</option>
 					<option value="3">Марта</option>
@@ -40,38 +39,38 @@
 					<option value="11">Ноября</option>
 					<option value="12">Декабря</option>
 				</select>
-				<input type="number" name="year" placeholder="ГГГГ" required pattern="[0-9]{4,}" size="4"/>
+				<input type="number" name="year" placeholder="ГГГГ" required pattern="[0-9]{4,}" size="4"class="transparent-input" />
 				<br>
-				<input type="submit" value="Ролл">
+				<h1 id="day-indicator"></h1>
 			</form>
 		</div>
 		<div class="ab" id="results" style="display: none;">
-			<table id="matrix" class="matrix" cellspacing="0">
-				<tr>
-					<td class="mx-cell" id="1"></td>
-					<td class="mx-cell" id="4"></td>
-					<td class="mx-cell" id="7"></td>
-				</tr>
-				<tr>
-					<td class="mx-cell" id="2"></td>
-					<td class="mx-cell" id="5"></td>
-					<td class="mx-cell" id="8"></td>
-				</tr>
-				<tr>
-					<td class="mx-cell" id="3"></td>
-					<td class="mx-cell" id="6"></td>
-					<td class="mx-cell" id="9"></td>
-				</tr>
-			</table>
-			<div id="description">
-				<div id="dsc-title"></div>
-				<div id="dsc-text" class="desc"></div>
-				<div id="dsc-pup" style="display: none;" class="desc"></div>
+			<div id="results-wrap">
+				<table id="matrix" class="matrix" cellspacing="0">
+					<tr>
+						<td class="mx-cell" id="1"></td>
+						<td class="mx-cell" id="4"></td>
+						<td class="mx-cell" id="7"></td>
+					</tr>
+					<tr>
+						<td class="mx-cell" id="2"></td>
+						<td class="mx-cell" id="5"></td>
+						<td class="mx-cell" id="8"></td>
+					</tr>
+					<tr>
+						<td class="mx-cell" id="3"></td>
+						<td class="mx-cell" id="6"></td>
+						<td class="mx-cell" id="9"></td>
+					</tr>
+				</table>
+				<div id="description">
+					<div id="dsc-text" class="desc"></div>
+					<div id="dsc-pup" style="display: none;" class="desc"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div id="calendar" style="display:none;" class="switchable">
-		<h3>Генератор календарей</h3>
+	<div id="cal" style="display:none;" class="switchable">
 		<div id="cal-inputs">
 			<form onsubmit="return false;">
 				<span>Год: </span>
@@ -86,8 +85,76 @@
 
 		</div>
 	</div>
-	<script>
-	$(document).ready(bindsomeshit);
-	</script>
+	<div id="faq" style="display:none;" class="switchable">
+		<h1>FAQ</h1>
+		<div class="content">
+			<div class="qa-entry">
+			  <div class="qa-label ql-q">В:</div>
+			  <div class="qa-body">Что это вообще за херня и как на это можно ориентироватьсЯ?</div>
+			</div>
+			<div class="qa-entry">
+			  <div class="qa-label ql-a">О:</div>
+			  <div class="qa-body">Абстрактная математическая модель, основанная на системе летоисчисления, имеющая, тем не менее, теоретическое применение.</div>
+			</div>
+			<hr>
+			<div class="qa-entry">
+			  <div class="qa-label ql-q">В:</div>
+			  <div class="qa-body">Белодневка - это ущербный, синедневка - норма, жёлтодневка - круто, а краснодневка - бог?</div>
+			</div>
+			<div class="qa-entry">
+			  <div class="qa-label ql-a">О:</div>
+			  <div class="qa-body">да, именно так.</div>
+			</div>
+			<hr>
+			<div class="qa-entry">
+			  <div class="qa-label ql-q">В:</div>
+			  <div class="qa-body">Эта модель распространяется на людей?</div>
+			</div>
+			<div class="qa-entry">
+			  <div class="qa-label ql-a">О:</div>
+			  <div class="qa-body">Правила распространяются как на людей, так и на их проекты. Например, веб-сайты, покупка техники, регистрация фирм, основание городов и электростанций, а также даты выхода аниме-тайтлов и даже отношения. Свадьбы надо играть в определённые дни, для того, чтобы в семье всё было хорошо.</div>
+			</div>
+			<hr>
+			<div class="qa-entry">
+			  <div class="qa-label ql-q">В:</div>
+			  <div class="qa-body">Насколько глобальна и прочна эта система?</div>
+			</div>
+			<div class="qa-entry">
+			  <div class="qa-label ql-a">О:</div>
+			  <div class="qa-body">Система очень прочная, но не имеет безграничного влияния и зависит от точки старта - то есть от 1-го января 0-го года нашей эры.</div>
+			</div>
+			<hr>
+			<div class="qa-entry">
+			  <div class="qa-label ql-q">В:</div>
+			  <div class="qa-body">А что будет, если президент России установит новую систему отсчёта завтра?</div>
+			</div>
+			<div class="qa-entry">
+			  <div class="qa-label ql-a">О:</div>
+			  <div class="qa-body">Все даты рождения будут сброшены, причём, потребуется изменять даты не только в государственных бумажках, но и в операционных системах, перенастраивать атомные часы, перенастраивать тотально все смартфоны, переводить календари</div>
+			</div>
+			<hr>
+			<div class="qa-entry">
+			  <div class="qa-label ql-q">В:</div>
+			  <div class="qa-body">Может ли эта система быть опрокинута?</div>
+			</div>
+			<div class="qa-entry">
+			  <div class="qa-label ql-a">О:</div>
+			  <div class="qa-body">Эта теория, может быть опрокинута, но только очень большими усилиями. Если люди захотят - они могут всё опрокинуть. Если нет - то всё будет как и прежде.</div>
+			</div>
+		</div>
+	</div>
+	<div id="util" style="display:none;" class="switchable">
+		<h1>Утилиты</h1>
+		<div class="content">
+			<div class="util-entry">
+				<h2>Шизоиндикатор для vk.com</h2>
+				<img src="img/schizoindicator-example.png" alt="schizoindicator-example">
+				<div class="util-desc">Отображает цвет дня рождения, если информация доступна.<br>
+				Для работы потребуется Greasemonkey / Tampermonkey или их аналоги.</div>
+				<a href="https://github.com/Juribiyan/schizomatrix/raw/master/util/schizoindicator-vk.user.js" class="install-btn">Установить</a>
+			</div>
+		</div>
+	</div>
+	<script>$(document).ready(readyset);</script>
 </body>
 </html>
