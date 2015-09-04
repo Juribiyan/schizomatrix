@@ -1,0 +1,38 @@
+{
+  "name": "kranus-test",
+  "version": "1.0.0",
+  "description": "Original Kranus test",
+  "homepage": "https://github.com/Juribiyan/schizomatrix",
+  "license": {
+    "type": "MIT"
+  },
+  "keywords": [
+    "schizomatrix",
+    "kranus"
+  ],
+  "author": "Snivy",
+  "maintainers": [
+    "Snivy (http://snyb.tk)"
+  ],
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/Juribiyan/schizomatrix/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Juribiyan/schizomatrix.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "peerDependencies": {
+
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  },
+  "main": "./schizomatrix.js"
+}

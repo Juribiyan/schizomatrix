@@ -542,3 +542,14 @@ hr {
 .install-btn:hover {
 	background: #0D8A0D;
 }
+.code {
+	padding: 10px;
+	font-weight: bold;
+	margin-top: 15px;
+	border: 2px solid #0AAD0A;
+	display: inline-block;
+	font-family: monospace;
+}
+.code a {
+	color: #0D8A0D;
+}
