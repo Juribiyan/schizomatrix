@@ -227,6 +227,10 @@ function readyset() {
 		console.log('No CG!')
 		$('head').append('<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">');
 	}
+
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('./sw.js');
+	}
 }
 
 function switchtab(id) {
