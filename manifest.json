@@ -27,7 +27,7 @@
 			"type": "image/png"
 		}],
 	"lang": "ru-RU",
-	"start_url": "/index.html",
+	"start_url": "/schizomatrix",
 	"display": "standalone",
 	"background_color": "#212121",
 	"theme_color": "#212121"

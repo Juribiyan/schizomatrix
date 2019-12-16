@@ -2,7 +2,6 @@
 var cacheName = 'schizomatrix';
 var filesToCache = [
   './',
-  './index.html',
   './style.css',
   './script.js',
   './jquery.min.js',
